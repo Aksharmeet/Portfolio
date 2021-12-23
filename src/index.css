@@ -3,3 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-moz-selection {
+  /* Code for Firefox */
+  background: #ffd12d;
+}
+
+::selection {
+  background: #ffd12d;
+}
+body {
+  background-color: rgb(244, 232, 217);
+  color: #1f1c44;
+}
+a {
+  text-decoration: none;
+  color: #1f1c44;
+}

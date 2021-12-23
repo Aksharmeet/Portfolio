@@ -1,0 +1,27 @@
+.heartbeat:hover {
+  -webkit-animation: heartbeat 0.5s ease-out infinite both;
+  animation: heartbeat 0.5s ease-out infinite both;
+}
+@keyframes heartbeat {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
