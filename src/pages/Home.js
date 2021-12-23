@@ -21,6 +21,18 @@ function Home() {
                  
                 </div>
             </Intro>
+            <Projects>
+                <Project>
+                    <a>
+                    <ImageWrapper>
+                    <img className = "tesla-desktop" src="./images/Screenshot 2021-12-23 at 5.27.36 PM.png"></img>
+                    <img className = "tesla-mobile" src="./images/Screenshot 2021-12-23 at 5.29.13 PM.png"></img>
+                    </ImageWrapper>
+                    <p>Tesla Website Clone</p>
+                    </a>
+
+                </Project>
+            </Projects>
             <Footer/>
         </HomeWrapper>
     )
@@ -29,7 +41,7 @@ const HomeWrapper = styled.div`
     
 `
 const Intro = styled.div`
-    padding:60px 70px;
+    padding:60px 40px;
     font-size:3rem;
     font-weight: 600;
     }
@@ -58,5 +70,45 @@ const Intro = styled.div`
    
    
 `
+const Projects = styled.div`
+    width:100%;
+    padding:0 40px;
+    
 
+`
+const Project = styled.div`
+background-color:#87ceeb;
+padding:40px;
+border-radius:10px;
+border:5px solid #000;
+max-width:700px;
+margin:0 auto;
+    .tesla-desktop{
+        width:80%;
+        margin:0 0 10% 0;
+        border-radius:10px;
+        border:2px solid #000;
+        position:relative;
+        left:5%;
+    }
+    .tesla-mobile{
+        width:20%;
+        position:relative;
+        right:10%;
+        border-radius:10px;
+        border:2px solid #000;
+    } 
+   p{
+       font-size:1.5rem;
+       font-family:cinzel;
+       font-weight:500;
+   }
+`
+const ImageWrapper = styled.div`
+    transition: transform .3s;
+   
+        :hover{
+            transform:Scale(1.1);
+        }
+`
 export default Home

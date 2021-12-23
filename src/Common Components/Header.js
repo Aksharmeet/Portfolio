@@ -101,6 +101,7 @@ const RightNav = styled.div`
     transition:transform .5s;
     overflow-x: hidden;
     position:absolute;
+    z-index:100;
     top:0;
     @media (min-width:860px){
         transform:translateX(0) Scale(1);
