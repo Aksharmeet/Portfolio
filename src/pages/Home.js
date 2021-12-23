@@ -23,13 +23,26 @@ function Home() {
             </Intro>
             <Projects>
                 <Project>
-                    <a>
-                    <ImageWrapper>
-                    <img className = "tesla-desktop" src="./images/Screenshot 2021-12-23 at 5.27.36 PM.png"></img>
-                    <img className = "tesla-mobile" src="./images/Screenshot 2021-12-23 at 5.29.13 PM.png"></img>
-                    </ImageWrapper>
-                    <p>Tesla Website Clone</p>
-                    </a>
+                    <div className='bg-blue'>
+                        <a href="https://goofy-borg-ab2033.netlify.app" target="_blank">
+                        <ImageWrapper>
+                        <img className = "tesla-desktop" src="./images/Screenshot 2021-12-23 at 5.27.36 PM.png"></img>
+                        <img className = "tesla-mobile" src="./images/Screenshot 2021-12-23 at 5.29.13 PM.png"></img>
+                        </ImageWrapper>
+                        <p>Tesla Website Clone</p>
+                        </a>
+                    </div>
+                </Project>
+                <Project>
+                    <div className="bg-orange">
+                        <a href="https://hopeful-murdock-c41964.netlify.app" target="_blank">
+                        <ImageWrapper>
+                        <img className = "tesla-desktop position1" src="./images/Screenshot 2021-12-23 at 6.53.00 PM.png"></img>
+                        <img className = "tesla-mobile position2" src="./images/Screenshot 2021-12-23 at 6.52.10 PM.png"></img>
+                        </ImageWrapper>
+                        <p>The Returant</p>
+                        </a>
+                    </div>
 
                 </Project>
             </Projects>
@@ -73,21 +86,32 @@ const Intro = styled.div`
 const Projects = styled.div`
     width:100%;
     padding:0 40px;
-    
+    @media (min-width:1000px){
+        display:flex;
+    }
+   
 
 `
 const Project = styled.div`
-background-color:#87ceeb;
-padding:40px;
-border-radius:10px;
-border:5px solid #000;
-max-width:700px;
-margin:0 auto;
+
+    .bg-blue{
+        padding:40px;
+        background-color:#87ceeb;
+    }
+    .bg-orange{
+        padding:40px;
+        background-color:rgb(255,182,142);
+    }
+
+    border-radius:10px;
+    border:5px solid #1f1c44;
+    max-width:700px;
+    margin:50px auto 50px auto;
     .tesla-desktop{
         width:80%;
         margin:0 0 10% 0;
         border-radius:10px;
-        border:2px solid #000;
+        border:2px solid #1f1c44;
         position:relative;
         left:5%;
     }
@@ -96,17 +120,22 @@ margin:0 auto;
         position:relative;
         right:10%;
         border-radius:10px;
-        border:2px solid #000;
+        border:2px solid #1f1c44;
     } 
+
    p{
        font-size:1.5rem;
        font-family:cinzel;
        font-weight:500;
    }
+   
+   @media (min-width:1000px){
+        width:48%;
+   }
 `
 const ImageWrapper = styled.div`
     transition: transform .3s;
-   
+
         :hover{
             transform:Scale(1.1);
         }
