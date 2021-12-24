@@ -23,7 +23,9 @@ function Header() {
         <HeaderWrapper>
             <Desktop>
            <LeftNav>
+               <NavLink to="/">
                 <h1>Akshar &trade;</h1>
+                </NavLink>
            </LeftNav>
            <RightNav status = {status}>
            <CloseContainer onClick={OpenClose}><FontAwesomeIcon icon={faTimes} size = "3x"/></CloseContainer>
