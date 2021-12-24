@@ -47,8 +47,9 @@ function About() {
     const handleSubmit = (e) =>{
         e.preventDefault();
         if(e.target.checkValidity()){
-            const Submitted = document.getElementById('submitted');
-           
+            setSubmitState(true)
+        } else{
+            setSubmitState(false)
         }
     }
     const onChange = (e) => {
@@ -65,12 +66,15 @@ function About() {
                 </h4>
                 
             </Intro>
-            <FormActual onSubmit={handleSubmit}>
+            <FormActual onSubmit={handleSubmit} SubmitState={SubmitState}>
             {Inputs.map((input) => (
                 <FormInput key={input.id} {...input} onChange={onChange} value={values[input.name]}  />
             ))}
             <button>Submit</button>
             </FormActual>
+            <Submitted SubmitState={SubmitState}>
+              
+            </Submitted>
             <Footer/>
         </div>
     )
@@ -90,22 +94,25 @@ const Intro = styled.div`
 `
 const FormActual = styled.form`
     padding:0 40px;
-    
-button{
-    width:100%;
-    font-family:raleway;
-    font-size:1.5rem;
-    font-weight:500;
-    padding:20px 0px;
-     background-color:rgb(32,28,68);
-     color:#fff;
-     border-style:none;
-     border:0px solid #000;
-     margin:60px auto;
-     border-radius:5px;
-    cursor:pointer;
-}
+    display: ${props => props.SubmitState ? "none" : "block"};
+    button{
+        width:100%;
+        font-family:raleway;
+        font-size:1.5rem;
+        font-weight:500;
+        padding:20px 0px;
+        background-color:rgb(32,28,68);
+        color:#fff;
+        border-style:none;
+        border:0px solid #000;
+        margin:60px auto;
+        border-radius:5px;
+        cursor:pointer;
+    }
 
+`
+const Submitted = styled.div`
+    display: ${props => props.SubmitState ? "block" : "none"};
 `
 
 export default About
