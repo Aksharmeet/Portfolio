@@ -5,6 +5,10 @@ import styled from 'styled-components'
 
 // Importing formInputs
 import FormInput from './FormInput'
+
+// Importing FontAwesom
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 function About() {
     const [values, setValues] = useState({
         username:"",
@@ -73,7 +77,11 @@ function About() {
             <button>Submit</button>
             </FormActual>
             <Submitted SubmitState={SubmitState}>
-              
+            <div>
+            <FontAwesomeIcon icon={faCheckCircle} size="2x"/>
+            <p>  Your mail has been sent !!<br/>
+             We will get back as soon as possible.</p>
+             </div>
             </Submitted>
             <Footer/>
         </div>
@@ -113,6 +121,21 @@ const FormActual = styled.form`
 `
 const Submitted = styled.div`
     display: ${props => props.SubmitState ? "block" : "none"};
+    padding:0 40px;
+    margin:0 auto;
+    margin-bottom:50px;
+    div{
+        padding:20px 0px 20px 10px;
+        font-size:1.5rem;
+        background-color:green;
+        color:#fff;
+        border-radius:5px;
+        display:flex;
+        align-items:center;
+    }
+    p{
+        margin-left:10px;
+    }
 `
 
 export default About
