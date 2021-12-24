@@ -16,9 +16,7 @@ function FormInput(props) {
            </input>
            <span><p>{errorMessage}</p></span>
        </Form>
-       <Submitted>
-
-       </Submitted>
+       
        </div>
     )
 }
@@ -68,8 +66,7 @@ const Form = styled.div`
     }
 
 `
-const Submitted = styled.div`
-`
+
 
 
 export default FormInput
