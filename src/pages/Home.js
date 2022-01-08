@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Common Components/Header'
-import Footer from '../Common Components/Footer'
+import Header from '../CommonComponents/Header'
+import Footer from '../CommonComponents/Footer'
 import styled from 'styled-components'
 import '../animations.css'
 function Home() {
@@ -41,6 +41,18 @@ function Home() {
                         <img className = "tesla-mobile position2" src="./images/Screenshot 2021-12-23 at 6.52.10 PM.png"></img>
                         </ImageWrapper>
                         <p>The Returant</p>
+                        </a>
+                    </div>
+
+                </Project>
+                <Project>
+                    <div className="bg-red">
+                        <a href="https://netflix-63936.firebaseapp.com" target="_blank">
+                        <ImageWrapper>
+                        <img className = "tesla-desktop position1" src="./images/Netflix-d.png"></img>
+                        <img className = "tesla-mobile position2 size1" src="./images/Netflix-s.png"></img>
+                        </ImageWrapper>
+                        <p>Netflix-clone</p>
                         </a>
                     </div>
 
@@ -88,6 +100,8 @@ const Projects = styled.div`
     padding:0 40px;
     @media (min-width:1000px){
         display:flex;
+        gap:20px;
+        
     }
    
 
@@ -95,14 +109,24 @@ const Projects = styled.div`
 const Project = styled.div`
 
     .bg-blue{
-        padding:40px;
+        padding-top:20px;
+        padding-left:10px;
         background-color:#87ceeb;
     }
     .bg-orange{
-        padding:40px;
+        padding-top:20px;
+        padding-left:10px;
         background-color:rgb(255,182,142);
     }
-
+    .bg-red{
+        padding-top:20px;
+        padding-left:10px;
+        background-color:#221f1f;
+       p{
+           color:#fff;
+          margin-top:6px;
+       }
+    }
     border-radius:10px;
     border:5px solid #1f1c44;
     max-width:700px;
@@ -122,7 +146,7 @@ const Project = styled.div`
         border-radius:10px;
         border:2px solid #1f1c44;
     } 
-
+  
    p{
        font-size:1.5rem;
        font-family:cinzel;
@@ -130,7 +154,7 @@ const Project = styled.div`
    }
    
    @media (min-width:1000px){
-        width:48%;
+       width:100%;
    }
 `
 const ImageWrapper = styled.div`
