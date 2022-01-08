@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Header from '../../Common Components/Header'
-import Footer from '../../Common Components/Footer'
+import Header from '../../CommonComponents/Header'
+import Footer from '../../CommonComponents/Footer'
 import styled from 'styled-components'
 
 // Importing formInputs
