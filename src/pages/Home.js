@@ -13,7 +13,7 @@ function Home() {
                 </p>
                 <div  className="heartbeat" >
                     <a href="mailto:aksharmeetsingh21@gmail.com"> 
-                        <p>
+                        <p className='aksharmeet'>
                         aksharmeetsingh21@gmail.com 
                         <img src="https://uploads-ssl.webflow.com/5d0f20ee6c004646f3c81f02/615bf8db0a1498233ce772d6_arrow-01.svg"/>
                         </p>
@@ -26,8 +26,8 @@ function Home() {
                     <div className='bg-blue'>
                         <a href="https://goofy-borg-ab2033.netlify.app" target="_blank">
                         <ImageWrapper>
-                        <img className = "tesla-desktop" src="./images/Screenshot 2021-12-23 at 5.27.36 PM.png"></img>
-                        <img className = "tesla-mobile" src="./images/Screenshot 2021-12-23 at 5.29.13 PM.png"></img>
+                        <img className = "tesla-desktop" src="./images/Tesla-d.jpg"></img>
+                     
                         </ImageWrapper>
                         <p>Tesla Website Clone</p>
                         </a>
@@ -37,8 +37,8 @@ function Home() {
                     <div className="bg-orange">
                         <a href="https://hopeful-murdock-c41964.netlify.app" target="_blank">
                         <ImageWrapper>
-                        <img className = "tesla-desktop position1" src="./images/Screenshot 2021-12-23 at 6.53.00 PM.png"></img>
-                        <img className = "tesla-mobile position2" src="./images/Screenshot 2021-12-23 at 6.52.10 PM.png"></img>
+                        <img className = "tesla-desktop position1" src="./images/Resturant-d.jpg"></img>
+                       
                         </ImageWrapper>
                         <p>The Returant</p>
                         </a>
@@ -49,8 +49,8 @@ function Home() {
                     <div className="bg-red">
                         <a href="https://netflix-63936.firebaseapp.com" target="_blank">
                         <ImageWrapper>
-                        <img className = "tesla-desktop position1" src="./images/Netflix-d.png"></img>
-                        <img className = "tesla-mobile position2 size1" src="./images/Netflix-s.png"></img>
+                        <img className = "tesla-desktop position1" src="./images/Netflix-d.jpg"></img>
+                      
                         </ImageWrapper>
                         <p>Netflix-clone</p>
                         </a>
@@ -63,16 +63,17 @@ function Home() {
     )
 }
 const HomeWrapper = styled.div`
+overflow:hidden;
+
     
 `
 const Intro = styled.div`
     padding:60px 40px;
     font-size:3rem;
     font-weight: 600;
-    }
+    
     div{
         padding-top:40px;
-        
         trnsition:transform .5s;
         p{
             display:flex;
@@ -85,83 +86,131 @@ const Intro = styled.div`
             width:5%;
         }
         :hover{
-           
         }
+           
+        
     }
    @media (min-width:1000px) {
     font-size:5rem;
     font-weight: 600;
     max-width:1100px;
+   }
+   @media (max-width:420px) {
+    p{
+        font-size:2.8rem;
+    }
+    
+   }
+   @media (max-width:380px) {
+       overflow:hidden;
+       padding:20px 20px;
+    img{
+        display:none;
+    }
+    p{
+        font-size:2.3rem;
+    }
+   }
+   @media (max-width:370px) {
+    div {
+        p{
+            font-size:1.2rem;
+        }
+    }
    
+   }
    
 `
 const Projects = styled.div`
     width:100%;
     padding:0 40px;
+    text-align:center;
     @media (min-width:1000px){
         display:flex;
         gap:20px;
         
     }
+    @media (max-width:420px){
+        padding:0 0px;
+    }
    
 
 `
 const Project = styled.div`
-
-    .bg-blue{
+   
+    .bg-blue, .bg-orange, .bg-red{
         padding-top:20px;
-        padding-left:10px;
+    }
+    .bg-blue{
         background-color:#87ceeb;
     }
     .bg-orange{
-        padding-top:20px;
-        padding-left:10px;
         background-color:rgb(255,182,142);
     }
     .bg-red{
-        padding-top:20px;
-        padding-left:10px;
         background-color:#221f1f;
        p{
            color:#fff;
           margin-top:6px;
+          margin-bottom:-5px;
        }
     }
+  
     border-radius:10px;
     border:5px solid #1f1c44;
     max-width:700px;
-    margin:50px auto 50px auto;
+    margin:0px auto 40px auto;
     .tesla-desktop{
-        width:80%;
-        margin:0 0 10% 0;
+        width:90%;
+        margin:0 auto 5% auto;
         border-radius:10px;
         border:2px solid #1f1c44;
-        position:relative;
-        left:5%;
+        
     }
-    .tesla-mobile{
-        width:20%;
-        position:relative;
-        right:10%;
-        border-radius:10px;
-        border:2px solid #1f1c44;
-    } 
-  
    p{
        font-size:1.5rem;
        font-family:cinzel;
        font-weight:500;
+        position:relative;
+        bottom:10px;
    }
    
-   @media (min-width:1000px){
+   @media (min-width:900px){
        width:100%;
+    
    }
+   @media (max-width:420px){
+    border:0px;
+    text-align:center;
+    .bg-blue{
+        background-color:rgba(0,0,0,0);
+    }
+    .bg-orange{
+        background-color:rgba(0,0,0,0);
+    }
+    .bg-red{
+        background-color:rgba(0,0,0,0);
+       p{
+         color:#000;
+          margin-top:6px;
+       }
+    }
+   
+   
+    @media(max-width: 330px){
+    p{
+        font-size:1.2rem;
+        
+    }
+    }
+   
+}
 `
 const ImageWrapper = styled.div`
     transition: transform .3s;
 
         :hover{
-            transform:Scale(1.1);
+            transform:Scale(1.02);
         }
 `
 export default Home

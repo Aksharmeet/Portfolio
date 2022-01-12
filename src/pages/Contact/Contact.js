@@ -98,6 +98,9 @@ const Intro = styled.div`
     @media(min-width:1100px){
         font-size:4rem;
     }
+    @media(max-width: 330px){
+        font-size:1.8rem;
+    }
     
 `
 const FormActual = styled.form`
