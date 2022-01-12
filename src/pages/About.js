@@ -67,7 +67,7 @@ const Main = styled.div`
             left:0px;
             bottom:0px;
         }
-    };
+    }
    
     h5{
         font-size:1.5rem;
@@ -76,20 +76,24 @@ const Main = styled.div`
         background-color:#ffd12d;
         width:80vw;
         padding:5px 5px;
-        }
+    }
     p{
         font-size:1.3rem; 
         line-height:3rem;
     }
 
        
-    }
+    
     @media (min-width:860px){
         h2{
-            font-size:3rem;
-            
-            
+            font-size:3rem;  
         }
+    }
+    @media (max-width:330px){
+        h2{
+            font-size:1.9rem;
+        }
+    }
     
             
     
