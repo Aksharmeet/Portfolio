@@ -45,7 +45,12 @@ function Home() {
                     </div>
 
                 </Project>
-                <Project>
+               
+            </Projects>
+
+            
+            <Projects>
+            <Project>
                     <div className="bg-red">
                         <a href="https://netflix-63936.firebaseapp.com" target="_blank">
                         <ImageWrapper>
@@ -53,6 +58,19 @@ function Home() {
                       
                         </ImageWrapper>
                         <p>Netflix-clone</p>
+                        </a>
+                    </div>
+
+            </Project>
+               
+            <Project>
+                    <div className="bg-red">
+                        <a href="https://joyful-trifle-6e97d3.netlify.app/" target="_blank">
+                        <ImageWrapper>
+                        <img className = "tesla-desktop position1" src="./images/mini-task.png"></img>
+                      
+                        </ImageWrapper>
+                        <p>Mini Task Manager</p>
                         </a>
                     </div>
 
